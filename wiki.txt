@@ -1,0 +1,44 @@
+1. pip install django - установка django
+2. django-admin startproject + name - создаем проект
+3. в settings.py в ROOT_URLCONF = прописать 'name.urls'
+4. в settings.py в TEMPLATES = -> 'DIRS': ['templates'],
+5. cd + root folder - переходим в папку проекта
+6. py manage.py runserver - запуск сервера
+
+7. py manage.py startapp + name - создание приложения
+
+Подключение страниц:
+1. views.py - создаем файл в котором содержатся функции со ссылками на HTML страницы
+    def home(request):
+        return render(request, 'home.html')
+2. HTML страницы храним в папке templates
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Main</title>
+        </head>
+        <body>
+            <h1>Home Page</h1>
+        </body>
+        </html>
+3. Прописываем путь в urls.py:
+    from . import views
+    path('', views.home)
+
+GIT Local
+git --version - проверка версии git
+git init - инициализировать git
+git status - посмотреть что не отслеживается в git
+git add . - добавить всё в отслеживание git
+git commit -m "commit" - закоммитим все изменения
+
+GITHub
+1. Создать репозиторий на git hub
+2. Выполнить всё из …or push an existing repository from the command line:
+    - git remote add origin https://github.com/SergeiSMV/Second.git
+    - git branch -M main (or master)
+    - git push -u origin main (or master)
+3. git push - последующие выгрузки
+
+после публикации проекта, параметр Debug изменить на False!!!
