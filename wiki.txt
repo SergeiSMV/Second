@@ -5,8 +5,6 @@
 5. cd + root folder - переходим в папку проекта
 6. py manage.py runserver - запуск сервера
 
-7. py manage.py startapp + name - создание приложения
-
 Подключение страниц:
 1. views.py - создаем файл в котором содержатся функции со ссылками на HTML страницы
     def home(request):
@@ -40,5 +38,22 @@ GITHub
     - git branch -M main (or master)
     - git push -u origin main (or master)
 3. git push - последующие выгрузки
+
+
+Приложения
+py manage.py startapp + name - создание приложения
+
+
+Миграции
+1. py manage.py migrate - принятие миграций приложений по умолчанию
+2. в settings.py прописать новые приложения в INSTALLED_APPS:
+    пример: 'events.apps.EventsConfig',
+    где: events - имя приложения
+         apps - означает, что это приложение
+         EventsConfig - имя класса из /migrations/apps.py
+3. создаюм путь для сохранения изображений (проект 2, урок 5, 14:00)
+4. установить Pillow для работы с изображениями
+5. создаем миграции для новых моделей py manage.py makemigrations
+6. принять миграции py manage.py migrate
 
 после публикации проекта, параметр Debug изменить на False!!!
