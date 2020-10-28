@@ -56,4 +56,8 @@ py manage.py startapp + name - создание приложения
 5. создаем миграции для новых моделей py manage.py makemigrations
 6. принять миграции py manage.py migrate
 
-после публикации проекта, параметр Debug изменить на False!!!
+Суперюзер
+py manage.py createsuperuser - создание суперюзера
+user: sergei
+e-mail: s9051133401@yandex.ru
+pass: 2001
