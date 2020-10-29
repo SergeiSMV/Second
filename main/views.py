@@ -7,4 +7,8 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse("This is about page")
+    return render(request, 'about.html')
+
+
+def event(request):
+    return render(request, 'events/events.html')
